@@ -1,0 +1,31 @@
+{
+  "name": "phore/session",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://infracamp.org/phore",
+  "description": "Session Handler",
+  "authors": [
+    {
+      "name": "Matthias Leuffen",
+      "email": "leuffen@continue.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Phore\\Session\\": "src/"
+    },
+    "files": [
+    ]
+  },
+  "require": {
+    "php" : ">7.1",
+    "phore/core": "dev-master",
+    "phore/flash": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "suggest": {
+  },
+  "minimum-stability": "dev"
+}
