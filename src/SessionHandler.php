@@ -143,7 +143,7 @@ class SessionHandler
                 "create_ts" => time(),
                 "last_seen_ts" => time()
             ]);
-
+        
         $session = $this->_loadSession($sessionStoreKey);
         if ($session === null)
             throw new \InvalidArgumentException("Internal error: Can't persist new session.");

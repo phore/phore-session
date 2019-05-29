@@ -40,7 +40,7 @@ class SessionModule implements AppModule
             throw new \InvalidArgumentException("Session Handler requires FlashModule registered");
 
         $app->define("sessionHandler", function (Flash $flash) {
-            $handler = new SessionHandler($flash, $this->allowClasses);
+            $handler = new SessionHandler($flash->withPrefix("PSES"), $this->allowClasses);
             return $handler;
         });
 
