@@ -86,6 +86,18 @@ class Session
         return $this->sessionData["_signin_user_id"];
     }
 
+    public function setOauthToken(string $token)
+    {
+        $this->sessionData["_oauth_token"] = $token;
+    }
+
+    public function getOauthToken() : ?string
+    {
+        if ( ! isset ($this->sessionData["_oauth_token"]))
+            return null;
+        return $this->sessionData["_oauth_token"];
+    }
+
     public function destroy()
     {
         $this->sessionHandler->destroy($this);
