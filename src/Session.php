@@ -73,6 +73,10 @@ class Session
         return $this->sessionData[$key];
     }
 
+    public function has (string $key) : bool
+    {
+        return isset ($this->sessionData[$key]);
+    }
 
     public function setSignInUserId(string $id = null)
     {
